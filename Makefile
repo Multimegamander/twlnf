@@ -7,10 +7,10 @@ endif
 
 include $(DEVKITARM)/ds_rules
 
-export TARGET	:=	twlnf
+export TARGET	:=	GodMode7
 export TOPDIR	:=	$(CURDIR)
 
-export VERSION	:=	0.3.1a
+export VERSION	:=	0.0.1a
 
 .PHONY: arm7/$(TARGET).elf arm9/$(TARGET).elf
 
@@ -21,7 +21,7 @@ all: $(TARGET).nds
 
 #---------------------------------------------------------------------------------
 $(TARGET).nds	:	arm7/$(TARGET).elf arm9/$(TARGET).elf
-	ndstool	-c $@ -b $(TARGET).bmp "DSi NAND File ... thing ...;version ${VERSION}" -7 arm7/$(TARGET).elf -9 arm9/$(TARGET).elf
+	ndstool	-c $@ -b $(TARGET).bmp "GodMode9, for the DSi;version ${VERSION}" -7 arm7/$(TARGET).elf -9 arm9/$(TARGET).elf
 
 #---------------------------------------------------------------------------------
 arm7/$(TARGET).elf:
